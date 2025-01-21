@@ -1,84 +1,100 @@
 <head>
- <title>
-  3
+  <title>
+    3
   </title>
   <style>
-   ts:
+    @keyframes textColorChange {
+      0% {
+        color: rgb(255, 0, 255);
+      }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Times New Roman", serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-}
+      25% {
+        color: #62ffff;
+      }
 
-.text {
-  display: block; /* Ensure the text container is visible */
-  max-width: 99%; /* Limit the width for better readability */
-  margin-bottom: 60px; /* Provide space for the fixed button */
-}
+      50% {
+        color: #2ce100;
+      }
+
+      75% {
+        color: hsl(41, 100%, 17%);
+      }
+
+      100% {
+        color: hsl(133, 36%, 70%);
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      /* Ensures the body can expand with content */
+      background-image: url('yotta-lottery.gif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: "Times New Roman", serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow-y: auto;
+      /* Allows scrolling if content exceeds viewport */
+    }
+
+    .text {
+      display: block;
+      max-width: 90%;
+      margin: 20px 0;
+      animation: textColorChange 5s infinite;
+    }
+
     .text-2 {
-      position: auto;
-  display: block; /* Ensure the text container is visible */
-  max-width: 99%; /* Limit the width for better readability */
-  margin-bottom: 60px; /* Provide space for the fixed button */
-}
+      display: block;
+      max-width: 90%;
+      margin: 20px 0;
+      animation: textColorChange 3s infinite;
+      flex: 0 0 auto;
+      /* Prevents .text-2 from growing or shrinking */
+    }
 
-.next-button {
-  position: auto;
-  bottom: 20px; /* Distance from the bottom of the viewport */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: hsl(225, 100%, 74%);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    .next-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: hsl(225, 100%, 74%);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-.next-button:hover {
-  background-color: hsl(227, 84%, 51%);
-}
+    .next-button:hover {
+      background-color: hsl(227, 84%, 51%);
+    }
   </style>
-  
 </head>
 <body>
-  <center>
-    <div class="text">
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <b>Just like there’s a lot I love about this page’s sponsor: <br>
-          <i style="font-size:80px;">
-            Yotta Bank!
-          </i>
-        </b>
-    </div>
+  <div class="text">
+    <b>Just like there’s a lot I love about this page’s sponsor:</b><br>
+    <i style="font-size:80px;">Yotta Bank!</i>
   </div>
-      <br><br><br><br><br><br><br><br><br>
-     <div class="text-2" style="font-size:200px">
-        What if saving money wasn’t just smart—but thrilling? Enter Yotta Bank, the fintech company transforming how we think about personal finance. Yotta takes the mundane act of saving and supercharges it with excitement, rewards, and the chance to win big.
-        Here’s how it works: for every $25 you save, you earn tickets into weekly prize draws with cash prizes ranging from a few cents to an astonishing $10 million. Yes, $10 million—just for saving money you were already planning to stash away. With FDIC-insured accounts and guaranteed interest, Yotta ensures your financial safety while turning saving into something you’ll actually look forward to.
-        But Yotta isn’t just a bank—it’s a financial ecosystem designed to help you succeed. Their innovative debit card offers cash-back rewards, unique savings boosts, and even instant prize opportunities with every transaction. Plus, they’ve added tools to help you automate saving, budget smarter, and achieve your financial goals faster.
-        What sets Yotta apart is their core mission: empowering users to build wealth while having fun. In an era where traditional banking feels stale, Yotta is a breath of fresh air—proving that saving doesn’t have to be a chore.
-        Ready to save smarter and dream bigger? Yotta Bank is here to make it happen. Sign up today and let the winning begin!
-        Go to the link yottabank.com/dearinternet to claim your first 4 tickets for free! Is safe, practical, sound financial practices just too boring and slow? Turn Gambling Into A Virtue!
-      </div>
-  </center>
-  <div> <center>
-    <button class="next-button" onclick="navigateToNextPage()">Next</button>
-    </center>
+  <div class="text-2" style="font-size:30px">
+    What if saving money wasn’t just smart—but thrilling? Enter Yotta Bank, the fintech company transforming how we think about personal finance. Yotta takes the mundane act of saving and supercharges it with excitement, rewards, and the chance to win big.
+    Here’s how it works: for every $25 you save, you earn tickets into weekly prize draws with cash prizes ranging from a few cents to an astonishing $10 million. Yes, $10 million—just for saving money you were already planning to stash away. With FDIC-insured accounts and guaranteed interest, Yotta ensures your financial safety while turning saving into something you’ll actually look forward to.
+    But Yotta isn’t just a bank—it’s a financial ecosystem designed to help you succeed. Their innovative debit card offers cash-back rewards, unique savings boosts, and even instant prize opportunities with every transaction. Plus, they’ve added tools to help you automate saving, budget smarter, and achieve your financial goals faster.
+    What sets Yotta apart is their core mission: empowering users to build wealth while having fun. In an era where traditional banking feels stale, Yotta is a breath of fresh air—proving that saving doesn’t have to be a chore.
+    Ready to save smarter and dream bigger? Yotta Bank is here to make it happen. Sign up today and let the winning begin!
+    Go to the link yottabank.com/dearinternet to claim your first 4 tickets for free! Is safe, practical, sound financial practices just too boring and slow? Turn Gambling Into A Virtue!
   </div>
-  
+  <button class="next-button" onclick="navigateToNextPage()">Next</button>
+
   <script>
-  function navigateToNextPage() {
+    function navigateToNextPage() {
       window.location.href = "https://www.example.com"; // Replace with your desired URL
     }
   </script>
-
 </body>
